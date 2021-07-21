@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>김유미 웹 퍼블리셔 포트폴리오</title>
+    <meta charset="UTF-8">
+
+    <!--viewport-->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- css-->
+    <link rel="stylesheet" href="common/css/common.css">
+    <link rel="stylesheet" href="maincss/main.css">
+
+    <!-- 웹폰트-->
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <!-- 파비콘 (여러 사이즈 자체 포함) -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- 제이쿼리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- common js-->
+    <script src="common/js/script.js"></script>
+
+    <!-- main js-->
+    <script src="mainjs/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- 탑버튼 js -->
+    <script src="mainjs/move-top.js"></script>
+    <script src="mainjs/easing.js"></script>
+    <script src="mainjs/slidemove.js"></script>
+
+    <!-- 폰트어썸 아이콘 -->
+    <script src="https://kit.fontawesome.com/295a32fdc7.js" crossorigin="anonymous"></script>
+
+    <!-- 모바일웹에서 주소창 사라지기 -->
+    <script>
+        // <![CDATA[
+        try {
+            window.addEventListener('load', function () {
+                setTimeout(scrollTo, 0, 0, 1);
+            }, false);
+        } catch (e) {}
+        // ]]>
+    </script>
+
+    <!--IE 하위 호환성(필수) -->
+    <!--[if lt IE 9]> 
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- //skipNav  -->
+    <div id="skip">
+        <a href="#visual">메인화면 바로가기</a>
+        <a href="#aboutme">프로필영역 바로가기</a>
+        <a href="#skills">스킬영역 바로가기</a>
+        <a href="#projects">프로젝트영역 바로가기</a>
+        <a href="#contact">연락처영역 바로가기</a>
+    </div>
+    <!-- //skipNav -->
+    <!-- 로딩 애니매이션 -->
+    <div id="loading">
+        <svg id="page-loader">
+            <circle cx="75" cy="75" r="20" />
+            <circle cx="75" cy="75" r="35" />
+            <circle cx="75" cy="75" r="50" />
+            <circle cx="75" cy="75" r="65" />
+            <line stroke-dasharray="50" x1="0" y1="100" x2="75" y2="100" />
+          </svg>
+    </div>
+    <!-- //로딩 애니매이션 -->
+    <div id="wrap">
+        <!-- 현재 스크롤 양  -->
+        <div id="scrollValue">
+            <span></span>
+        </div>
+        <!-- header -->
+        <div id="mainBg" data-0="background-color:rgb(41,44,73);" data-5700="background-color:rgb(64,82,177);"
+            data-7100="background-color:rgb(159, 109, 170);" data-10500="background-color:rgb(9,0,42);"
+            data-14000="background-color:rgb(192, 167, 138);" data-28300="background-color:rgb(192, 167, 138);"
+            data-35500="background-color:rgb(159, 109, 170);" data-37700="background-color:rgb(133,100,173);"></div>
+        <header id="headerWrap">
+            <div class="headerBox">
+                <nav id="gnb">
+                    <div class="gnbIcon">
+                        <span class="gnbIconline gnbIconlineLeft"></span>
+                        <span class="gnbIconline"></span>
+                        <span class="gnbIconline gnbIconlineRht"></span>
+                    </div>
+                    <div class="gnbMenu">
+                        <div class="gnbMenubox">
+                            <ul>
+                                <li class="menuList">
+                                    <a href="#visual">Hello</a></li>
+                                <li class="menuList">
+                                    <a href="#aboutme">About me</a></li>
+                                <li class="menuList">
+                                    <a href="#skills">Skills</a></li>
+                                <li class="menuList">
+                                    <a href="#projects">Projects</a></li>
+                                <li class="menuList">
+                                    <a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- //header -->
+        <!-- visual-->
+        <section id="visual">
+            <h2 class="ir_so">비쥬얼영역</h2>
+            <div class="decoWrap">
+                <span class="moon ir_pm" data-0="background:url(images/moon.png) no-repeat;background-size:contain;"
+                    data-800="background:url(images/moon_change.png) no-repeat;right: 12%;top:20%;transform:translateY(-13%) scale(1);"
+                    data-1900="background:url(images/profileimg.png) center no-repeat;right:50%;top:50%;transform:translateY(-50%) scale(0.7);"
+                    data-4200="right:50%;" data-4500="right:100%">달
+                    애니매이션</span>
+                <span class="star ir_pm" data-700="transform:scale(1);" data-1000="transform:scale(0);">별 배경</span>
+                <span class="cloud ir_pm" data-300="opacity:1;" data-900="opacity:0;">구름 애니매이션</span>
+                <span class="shootingstar shoot01"></span>
+                <span class="shootingstar shoot02"></span>
+                <span class="shootingstar shoot03"></span>
+                <span class="shootingstar shoot04"></span>
+                <span class="shootingstar shoot05"></span>
+            </div>
+            <div class="txtWrap" data-0="left:0%;" data-700="left:-100%;">
+                <p>Web Publisher</p>
+                <p>김유미입니다.</p>
+            </div>
+        </section>
+        <!-- //visual-->
+        <!-- aboutme -->
+        <section id="aboutme">
+            <h2 class="mainTit" data-1200="left:100%;" data-1400="left:10%" data-4000="left:10%" data-4500="left:-100%">
+                About me</h2>
+            <div class="container">
+                <!-- <div class="proImg" data-1600="left:100%;" data-1900="left:15%;">
+                    <img src="images/profileimg.png" alt="김유미 프로필이미지">
+                </div> -->
+                <div class="profile" data-4500="margin-left:50%;" data-5000="margin-left:0%;"
+                    data-5800="margin-left:-100%;">
+                    <h3 class="subTit" data-2100="opacity:0;" data-2400="opacity:0.2;" data-8500="opacity:0.2;"
+                        data-8800="opacity:0;">Profile</h3>
+                    <ul>
+                        <li data-2400="margin-left:200%" data-2600="margin-left:0%">
+                            <strong>Name</strong><em>김유미</em>
+                        </li>
+                        <li data-2600="margin-left:200%" data-2800="margin-left:0%">
+                            <strong>Age</strong><em>1993.01.11</em>
+                        </li>
+                        <li data-2800="margin-left:200%" data-3000="margin-left:0%">
+                            <strong>Address</strong><em>경기도 광주시</em>
+                        </li>
+                        <li data-3000="margin-left:200%" data-3200="margin-left:0%">
+                            <strong>Education</strong><em>웹 퍼블리셔(UI/UX 반응형 웹디자인)과정 수료(그린아카데미)</em>
+                        </li>
+                        <li data-3200="margin-left:200%" data-3400="margin-left:0%">
+                            <strong>License</strong>
+                            <span>
+                                <em>웹 디자인 기능사</em>
+                                <em>GTQ 포토샵 1급</em>
+                                <em>전산회계 2급</em>
+                                <em>유통관리사 2급</em>
+                                <em>MOS PPT, Excel</em>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gallery">
+                    <span data-5000="left:100%;" data-7200="left:-100%">
+                        <img src="images/gallery01.jpg" alt="개인 프로필 사진01">
+                    </span>
+                    <span data-5700="left:100%;" data-6800="left:-100%"><img src="images/gallery02.jpg"
+                            alt="개인 프로필 사진02"></span>
+                    <span data-5500="left:100%;" data-7600="left:-100%"><img src="images/gallery03.jpg"
+                            alt="개인 프로필 사진03"></span>
+                    <span data-5700="left:100%;" data-9000="left:-100%"><img src="images/gallery04.jpg"
+                            alt="개인 프로필 사진04"></span>
+                </div>
+                <div class="produce" data-6800="left:100%;" data-7100="left:45%;top:50%;opacity:1;"
+                    data-7500="left:45%;top:50%;opacity:1;" data-9000="top:-50%;opacity:0;">
+                    <p><em>안녕하세요. 웹 퍼블리셔 김유미입니다. ღ</em></p>
+                </div>
+            </div>
+        </section>
+        <!-- //aboutme -->
+        <!-- skills -->
+        <section id="skills">
+            <h2 class="mainTit" data-8800="top:200%;" data-9200="top:50%;" data-9407="top:50%;" data-9601="top:10%;"
+                data-10700="top:10%;" data-11200="top:-50%;">Skills</h2>
+            <div class="container">
+                <div class="skillsAni" data-9200="left:100%" data-11000="left:-200%;">
+                    <div class="skill01">
+                        <span>HTML5</span>
+                        <div class="html progress moonChart" data-progress-percent="90">
+                            <div class="html-bar progress ir_so moonShadow">HTML5</div>
+                        </div>
+                        <span class="show js-count1">90</span>
+                    </div>
+                    <div class="skill02">
+                        <span>CSS3</span>
+                        <div class="css progress moonChart" data-progress-percent="90">
+                            <div class="css-bar progress ir_so moonShadow">CSS3</div>
+                        </div>
+                        <span class="show js-count2">90</span>
+                    </div>
+                    <div class="skill03">
+                        <span>JavaScript</span>
+                        <div class="js progress moonChart" data-progress-percent="60">
+                            <div class="js-bar progress ir_so moonShadow">JavaScript</div>
+                        </div>
+                        <span class="show js-count3">60</span>
+                    </div>
+                    <div class="skill04">
+                        <span>Photoshop</span>
+                        <div class="ps progress moonChart" data-progress-percent="85">
+                            <div class="ps-bar progress ir_so moonShadow">jQuery</div>
+                        </div>
+                        <span class="show js-count4">85</span>
+                    </div>
+                    <div class="skill05">
+                        <span>Illustrator</span>
+                        <div class="ai progress moonChart" data-progress-percent="85">
+                            <div class="ai-bar progress ir_so moonShadow">photo,illu</div>
+                        </div>
+                        <span class="show js-count5">85</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //skills -->
+        <!-- projects -->
+        <section id="projects">
+            <h2 class="mainTit" data-11500="left:100%;" data-12000="left:10%;top:50%;" data-12494="top:50%"
+                data-14294="top:10%;" data-28600="top:10%;" data-29600="top:-50%;">Projects</h2>
+            <div class="container">
+                <div class="pro01" data-12600="left:100%" data-18000="left:-100%;">
+                    <h3 class="subTit" data-13000="left:120%;" data-19000="left:-80%;">01</h3>
+                    <span class="mockup">
+                        <img src="images/cor_mockup2.png" alt="오리온 기업형홈페이지 목업이미지">
+                    </span>
+                    <div class="desc">
+                        <strong>제과업체 오리온 PC 웹 사이트 리뉴얼</strong>
+                        <em>Redesign &amp; Publishing</em>
+                        <em>단독작업 (기여도 100&#37;)</em>
+                        <span>퍼블리싱을 배우며 처음 만들었던 기업형 사이트 입니다.
+                            최소 컨텐츠 너비를 1100px로 잡고 배치하였으며, 메인 페이지 뿐만 아니라 서브 페이지 7개까지 제작했습니다. hover를 활용한 슬라이드 네비게이션, 텍스트
+                            효과 및 AOS를 통해 페이지에 역동적인 느낌을 주었습니다. 깔끔한 컨셉의 웹사이트로 리뉴얼 및 웹 접근성 및 웹 표준을 고려하였고, 마크업 검사까지
+                            완료하였습니다.</span>
+
+                        <div class="btn">
+                            <a href="http://yumkim.cafe24.com/orion/" target="_blank" class="webBtn">Site view</a>
+                            <a href="pdf/orion_c_storyboard.pdf" download class="webBtn">Story board</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pro02" data-15250="left:100%" data-20650="left:-100%;">
+                    <h3 class="subTit" data-15650="left:120%;" data-21650="left:-80%;">02</h3>
+                    <span class="mockup">
+                        <img src="images/m_mockup.png" alt="오리온 모바일홈페이지 목업이미지">
+                    </span>
+                    <div class="desc">
+                        <strong>제과업체 오리온 모바일 웹 사이트 리뉴얼</strong>
+                        <em>Redesign &amp; Publishing</em>
+                        <em>단독작업 (기여도 100&#37;)</em>
+                        <span>제과업체 오리온의 모바일 웹을 새로운 컨셉으로 리뉴얼 했습니다. 제과라는 업종의 특성을 살려 귀엽고 아기자기한 컨셉을 잡았고, 기업에 대한 주요 정보만 담아
+                            직관적으로 구성했습니다. 서브페이지 모두 작업완료되었으며, 다수의 슬라이드, 그누보드 게시판, 탭메뉴 등이 적용되어 있습니다. 웹 접근성 및 웹 표준을 고려하였고,
+                            마크업 검사까지 완료하였습니다.
+                        </span>
+                        <div class="btn">
+                            <a href="#" target="_blank" onclick="window.open('http://yumkim.cafe24.com/orionM/','kimyumi mobile portfolio', 'width=375px,height=650px,left=100px,top=100px'); return false;" class="webBtn">Site view</a>
+                            <a href="pdf/orion_m_storyboard.pdf" download class="webBtn">
+                                Story board
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pro03" data-17900="left:100%" data-23300="left:-100%;">
+                    <h3 class="subTit" data-18300="left:120%;" data-24300="left:-80%;">03</h3>
+                    <span class="mockup">
+                        <img src="images/r_mockup.png" alt="산타마리아노벨라 반응형 홈페이지 목업이미지">
+                    </span>
+                    <div class="desc">
+                        <strong>코스메틱 브랜드 산타마리아노벨라 반응형 웹 사이트 리뉴얼</strong>
+                        <em>Redesign &amp; Publishing</em>
+                        <em>단독작업 (기여도 100&#37;)</em>
+                        <span>기존 사이트에는 해당 브랜드 특유의 아이덴티티가 전혀 드러나지 않음에 아쉬움을 느껴 해당 사이트를 선택했고, 차분하고 고급스러운 느낌을 중심으로 반응형 사이트로
+                            제작했습니다. 이를 위해 fade효과를 다수 사용하였고, SVG를 활용한 CSS 애니매이션과 풀비디오 비쥬얼을 메인에 적용했습니다. 마크업 검사 또한
+                            완료했습니다.</span>
+                        <div class="btn">
+                            <a href="http://yumkim.cafe24.com/media" target="_blank" class="webBtn">Site view</a>
+                            <a href="pdf/santa_r_storyboard.pdf" download class="webBtn">Story board</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pro04" data-20550="left:100%" data-25950="left:-100%;">
+                    <h3 class="subTit" data-20950="left:120%;" data-26950="left:-80%;">04</h3>
+                    <span class="mockup">
+                        <img src="images/pofol_mockup.png" alt="김유미 포트폴리오 페이지 목업이미지">
+                    </span>
+                    <div class="desc">
+                        <strong>개인 포트폴리오 PC 웹 사이트</strong>
+                        <em>Design &amp; Publishing</em>
+                        <em>단독작업 (기여도 100&#37;)</em>
+                        <span>저의 작업물들을 소개하기 위한 개인 포트폴리오 사이트로, 제가 좋아하는 밤하늘을 컨셉으로 잡아 풀어냈습니다. 별, 구름, 별똥별 다수의 CSS 애니매이션이
+                            적용되어있고, 인터랙티브한 느낌을 살리기 위해 스크롤
+                            반응형의 사이트로 제작했습니다. 컨텐츠의 각 주제는 section 태그로 구분해 레이아웃을 마크업 했습니다.
+                        </span>
+                        <div class="btn">
+                            <a href="javascript:void(0);" class="webBtn"
+                                onclick="javascript:alert('현재 보고 계신 사이트 입니다!')">Site
+                                view</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pro05" data-23200="left:100%" data-28600="left:-100%;">
+                    <h3 class="subTit" data-23600="left:120%;" data-29600="left:-80%;">05</h3>
+                    <span class="mockup">
+                        <img src="images/mega_mockup.png" alt="메가박스 반응형 홈페이지 목업이미지">
+                    </span>
+                    <div class="desc">
+                        <strong>영화관 메가박스 반응형 웹 사이트</strong>
+                        <em>Publishing</em>
+                        <em>단독작업 (기여도 100&#37;)</em>
+                        <span>실제 메가박스 웹 사이트의 디자인을 따라 클론 제작했습니다. 주요 기능으로는 Swiper 슬라이드, 유튜브 API 연동을 통한 영상재생, 탭메뉴, hover
+                            효과, input박스이며 반응형으로
+                            제작했습니다.</span>
+                        <div class="btn">
+                            <a href="http://yumkim.cafe24.com/megabox/" target="_blank" class="webBtn">Site view</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pro06" data-25850="left:100%" data-31250="left:-100%;">
+                    <h3 class="subTit" data-26250="left:120%;" data-32250="left:-80%;">06</h3>
+                    <span class="mockup">
+                        <img src="images/web_mockup.png" alt="메가박스 반응형 홈페이지 목업이미지">
+                    </span>
+                    <div class="desc">
+                        <strong>웹 표준 준수 PC 웹 사이트</strong>
+                        <em>Publishing</em>
+                        <em>단독작업 (기여도 100&#37;)</em>
+                        <span>웹 표준을 준수하여 제작한 웹 사이트입니다. 주요 기능으로는 Slick 슬라이드를 이용한 배너, 슬라이드 다운 / 업되는 네비게이션, 탭 메뉴, 로그인 창,
+                            게시판, 재생되는 갤러리 등이 구현되었고, 퍼블리싱에 있어 꼭 필요한 기본 기능을 모두 넣어 제작된 페이지입니다. W3C 마크업, CSS 검사 모두
+                            완료했습니다.</span>
+                        <div class="btn">
+                            <a href="http://yumkim.dothome.co.kr/webstandard/" target="_blank" class="webBtn">Site
+                                view</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //projects -->
+        <!-- cssAni  -->
+        <section id="cssAni">
+            <h2 class="mainTit" data-29570="left:100%;" data-34970="left:-100%;">CSS Animation</h2>
+            <div class="container">
+                <div class="cssAni01" data-31400="left:150%;" data-36800="left:-100%;">
+                    <h3 class="subTit" data-33000="left:100%;" data-37400="left:-100%;">Cube Ani</h3>
+                    <div class="perspective">
+                        <div class="cube">
+                            <div class="front">front</div>
+                            <div class="back">back</div>
+                            <div class="top">top</div>
+                            <div class="bottom">bottom</div>
+                            <div class="left">left</div>
+                            <div class="right">right</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //cssAni  -->
+        <!-- contact -->
+        <section id="contact">
+            <h2 class="mainTit" data-35700="top:120%;" data-36100="top:10%;">Contact</h2>
+            <div class="container">
+                <span class="contactBg" data-35700="opacity:0;" data-37700="opacity: 0.9;">
+                </span>
+                <div class="email" data-36300="top:100%;" data-36700="top:30%;">
+                    <h3 class="subTit">E-MAIL</h3>
+                    <a href="mailto:dwkimym93@gmail.com" target="_blank">
+                        <img src="images/mailicon.png" alt="메일아이콘">
+                    </a>
+                    <em>dwkimym93@gmail.com</em>
+                </div>
+                <div class="phone" data-36700="top:100%;" data-37100="top:30%;">
+                    <h3 class="subTit">PHONE</h3>
+                    <a href="tel:+821043232191">
+                        <img src="images/phoneicon.png" alt="휴대폰아이콘">
+                    </a>
+                    <em>010-4323-2191</em>
+                </div>
+                <div class="kakao" data-37100="top:100%;" data-37500="top:30%;">
+                    <h3 class="subTit">KAKAO ID</h3>
+                    <a href="http://qr.kakao.com/talk/pl0NMoEuqgCr4RH4zJMXgEsMz7I-" target="_blank">
+                        <img src="images/kakaoicon.png" alt="카카오톡아이콘">
+                    </a>
+                    <em>dwkimym</em>
+                </div>
+                <p data-35700="opacity:0;" data-37700="opacity:1;">Copyright © 2020 Kim Yumi All Rights Reserved.</p>
+            </div>
+        </section>
+        <!-- //contact -->
+    </div>
+
+    <!--TOP 버튼-->
+    <div class="topbtn">
+        <a href="#" id="toTop">
+            <span id="toTopHover">
+                <i class="fas fa-chevron-circle-up"></i>
+            </span>
+        </a>
+    </div>
+
+    <!-- 스크롤 js-->
+    <script src="mainjs/skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+    </script>
+    <script>
+        // scroll
+        $(window).scroll(function () {
+            var Scroll = $(this).scrollTop();
+            $("#scrollValue span").text(Scroll);
+        });
+    </script>
+    <!-- 로딩 애니매이션 -->
+    <script>
+        $(window).load(function(){
+            setTimeout(function(){
+                $("#loading").hide();
+            },1000);
+        });
+    </script>
+</body>
+
+</html>
